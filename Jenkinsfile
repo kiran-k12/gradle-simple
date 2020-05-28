@@ -10,7 +10,16 @@ pipeline {
 		              }
 	            }
 
-			
+		
+		        stage('Deploy') {
+				steps {
+				       bat 'gradlew clean deploy'
+					   bat 'echo "In cleanDeploy"'
+					  }
+				  }
+				 	
+		
 				
     }
 }
+
